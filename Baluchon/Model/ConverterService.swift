@@ -9,5 +9,6 @@
 import Foundation
 
 class ConverterService {
-    
+    private static let key = APIKeyManager().fixerKey
+    private static let converterUrl = URL(string: "http://data.fixer.io/api/latest?access_key=\(key)")
 }
