@@ -121,6 +121,7 @@
                     <tabBarItem key="tabBarItem" title="" id="cEm-Ut-Hwv"/>
                     <navigationItem key="navigationItem" title="Taux de change" id="oGL-yl-RK4"/>
                     <connections>
+                        <outlet property="dollarTextField" destination="Htg-Vc-PmX" id="OQi-QE-Qrg"/>
                         <outlet property="euroTextField" destination="mxT-8V-B3O" id="WET-lR-Hbc"/>
                     </connections>
                 </viewController>
