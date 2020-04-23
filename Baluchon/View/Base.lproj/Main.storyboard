@@ -81,6 +81,9 @@
                                         <state key="normal" image="ConvertButtonImage">
                                             <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedConvertButton" destination="yPN-bq-N5s" eventType="touchUpInside" id="cza-K4-Pn8"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant en $ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-nc-Dh0">
                                         <rect key="frame" x="0.0" y="290" width="359" height="36"/>

@@ -14,4 +14,11 @@ class TauxDeChangeViewController: UIViewController {
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         euroTextField.resignFirstResponder()
     }
+
+    @IBAction func tappedConvertButton() {
+        if euroTextField.isFirstResponder == true {
+            euroTextField.resignFirstResponder()
+        }
+        ConverterService.getCurrency()
+    }
 }
