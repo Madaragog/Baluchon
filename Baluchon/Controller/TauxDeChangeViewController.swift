@@ -27,7 +27,7 @@ class TauxDeChangeViewController: UIViewController {
         if let euro = Double(euroTextField.text!.replacingOccurrences(of: ",", with: ".")) {
             euroAmount = euro
             let dollarAmount = self.euroAmount * self.dollarValue
-            self.dollarTextField.text = "\(round(100*dollarAmount)/100)"
+            self.dollarTextField.text = "\(round(100*dollarAmount)/100)".replacingOccurrences(of: ".", with: ",")
         } else {
             self.alerteVC()
         }

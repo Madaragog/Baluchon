@@ -24,29 +24,29 @@ class ConverterService {
         task?.cancel()
         task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
-                if let data = data, error == nil {
-                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                        if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                            let rates = json["rates"] {
-                            if let values = rates as? [String: Double] {
-                                if let usd = values["USD"] {
-                                    let converter = Converter(dollarValue: usd)
-                                    callback(true, converter)
-                                } else {
-                                    callback(false, nil)
-                                }
-                            } else {
-                                callback(false, nil)
-                            }
-                        } else {
-                            callback(false, nil)
-                        }
-                    } else {
-                        callback(false, nil)
-                    }
-                } else {
+                guard let data = data, error == nil else {
                     callback(false, nil)
+                    return
                 }
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    callback(false, nil)
+                    return
+                }
+                guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                    let rates = json["rates"] else {
+                        callback(false, nil)
+                        return
+                }
+                guard let values = rates as? [String: Double] else {
+                    callback(false, nil)
+                    return
+                }
+                guard let usd = values["USD"] else {
+                    callback(false, nil)
+                    return
+                }
+                let converter = Converter(dollarValue: usd)
+                callback(true, converter)
             }
         }
         task?.resume()

@@ -10,6 +10,9 @@
 		8209A86424509961007CF776 /* ConverterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8209A86324509961007CF776 /* ConverterService.swift */; };
 		823EBB312450318700A8A2EB /* AppSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EBB302450318700A8A2EB /* AppSceneDelegate.swift */; };
 		826348EE2450B5B300FC892B /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826348ED2450B5B300FC892B /* APIKeyManager.swift */; };
+		8280D28A24544C3F002BAB20 /* ConverterServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */; };
+		8280D28C24544CDE002BAB20 /* Converter.json in Resources */ = {isa = PBXBuildFile; fileRef = 8280D28B24544CDE002BAB20 /* Converter.json */; };
+		8280D28E24544D32002BAB20 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280D28D24544D32002BAB20 /* FakeResponseData.swift */; };
 		829AF5952451A0F700CC0657 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829AF5942451A0F700CC0657 /* Converter.swift */; };
 		829D95DE2450C3D10061D9DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 829D95DD2450C3D10061D9DC /* Default-568h@2x.png */; };
 		82CFE1A824500C20006F4DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE1A724500C20006F4DC4 /* AppDelegate.swift */; };
@@ -19,10 +22,25 @@
 		82CFE1C024502725006F4DC4 /* TauxDeChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE1BF24502725006F4DC4 /* TauxDeChangeViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8280D28424544C28002BAB20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82CFE19C24500C20006F4DC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82CFE1A324500C20006F4DC4;
+			remoteInfo = Baluchon;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8209A86324509961007CF776 /* ConverterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterService.swift; sourceTree = "<group>"; };
 		823EBB302450318700A8A2EB /* AppSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSceneDelegate.swift; sourceTree = "<group>"; };
 		826348ED2450B5B300FC892B /* APIKeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = SOURCE_ROOT; };
+		8280D27F24544C28002BAB20 /* ConverterServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8280D28324544C28002BAB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterServiceTests.swift; sourceTree = "<group>"; };
+		8280D28B24544CDE002BAB20 /* Converter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Converter.json; sourceTree = "<group>"; };
+		8280D28D24544D32002BAB20 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		829AF5942451A0F700CC0657 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		829D95DD2450C3D10061D9DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		82CFE1A424500C20006F4DC4 /* Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8280D27C24544C28002BAB20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82CFE1A124500C20006F4DC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,11 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8280D28024544C28002BAB20 /* ConverterServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */,
+				8280D28D24544D32002BAB20 /* FakeResponseData.swift */,
+				8280D28B24544CDE002BAB20 /* Converter.json */,
+				8280D28324544C28002BAB20 /* Info.plist */,
+			);
+			path = ConverterServiceTests;
+			sourceTree = "<group>";
+		};
 		82CFE19B24500C20006F4DC4 = {
 			isa = PBXGroup;
 			children = (
 				829D95DD2450C3D10061D9DC /* Default-568h@2x.png */,
 				82CFE1A624500C20006F4DC4 /* Baluchon */,
+				8280D28024544C28002BAB20 /* ConverterServiceTests */,
 				82CFE1A524500C20006F4DC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				82CFE1A424500C20006F4DC4 /* Baluchon.app */,
+				8280D27F24544C28002BAB20 /* ConverterServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +144,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8280D27E24544C28002BAB20 /* ConverterServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8280D28624544C28002BAB20 /* Build configuration list for PBXNativeTarget "ConverterServiceTests" */;
+			buildPhases = (
+				8280D27B24544C28002BAB20 /* Sources */,
+				8280D27C24544C28002BAB20 /* Frameworks */,
+				8280D27D24544C28002BAB20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8280D28524544C28002BAB20 /* PBXTargetDependency */,
+			);
+			name = ConverterServiceTests;
+			productName = ConverterServiceTests;
+			productReference = 8280D27F24544C28002BAB20 /* ConverterServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		82CFE1A324500C20006F4DC4 /* Baluchon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82CFE1B824500C21006F4DC4 /* Build configuration list for PBXNativeTarget "Baluchon" */;
@@ -134,6 +190,11 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Cedric;
 				TargetAttributes = {
+					8280D27E24544C28002BAB20 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+						TestTargetID = 82CFE1A324500C20006F4DC4;
+					};
 					82CFE1A324500C20006F4DC4 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -153,11 +214,20 @@
 			projectRoot = "";
 			targets = (
 				82CFE1A324500C20006F4DC4 /* Baluchon */,
+				8280D27E24544C28002BAB20 /* ConverterServiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8280D27D24544C28002BAB20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8280D28C24544CDE002BAB20 /* Converter.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82CFE1A224500C20006F4DC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +262,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8280D27B24544C28002BAB20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8280D28A24544C3F002BAB20 /* ConverterServiceTests.swift in Sources */,
+				8280D28E24544D32002BAB20 /* FakeResponseData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82CFE1A024500C20006F4DC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +285,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8280D28524544C28002BAB20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82CFE1A324500C20006F4DC4 /* Baluchon */;
+			targetProxy = 8280D28424544C28002BAB20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		82CFE1AD24500C20006F4DC4 /* Main.storyboard */ = {
@@ -227,6 +314,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8280D28724544C28002BAB20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y76M773K4Z;
+				INFOPLIST_FILE = ConverterServiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Madaragog.ConverterServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baluchon.app/Baluchon";
+			};
+			name = Debug;
+		};
+		8280D28824544C28002BAB20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y76M773K4Z;
+				INFOPLIST_FILE = ConverterServiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Madaragog.ConverterServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baluchon.app/Baluchon";
+			};
+			name = Release;
+		};
 		82CFE1B624500C21006F4DC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -382,6 +512,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8280D28624544C28002BAB20 /* Build configuration list for PBXNativeTarget "ConverterServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8280D28724544C28002BAB20 /* Debug */,
+				8280D28824544C28002BAB20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82CFE19F24500C20006F4DC4 /* Build configuration list for PBXProject "Baluchon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
