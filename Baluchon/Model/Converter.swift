@@ -9,5 +9,5 @@
 import Foundation
 
 struct Converter {
-    var dollardValues: Double
+    var dollarValue: Double
 }

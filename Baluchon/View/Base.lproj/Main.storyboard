@@ -72,19 +72,35 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyU-w0-eyl">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBb-f6-zLW">
                                         <rect key="frame" x="0.0" y="110" width="359" height="160"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-Qg-7jM">
+                                                <rect key="frame" x="161" y="61.5" width="37" height="37"/>
+                                                <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyU-w0-eyl">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="160"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" image="ConvertButtonImage">
+                                                    <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedConvertButton" destination="yPN-bq-N5s" eventType="touchUpInside" id="cza-K4-Pn8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="Bsc-5V-LTe"/>
+                                            <constraint firstAttribute="trailing" secondItem="DyU-w0-eyl" secondAttribute="trailing" id="9w4-W3-MTe"/>
+                                            <constraint firstItem="WYs-Qg-7jM" firstAttribute="centerY" secondItem="VBb-f6-zLW" secondAttribute="centerY" id="Cfo-AV-ecA"/>
+                                            <constraint firstItem="DyU-w0-eyl" firstAttribute="top" secondItem="VBb-f6-zLW" secondAttribute="top" id="DNQ-4c-wDa"/>
+                                            <constraint firstAttribute="height" constant="160" id="Glc-fY-6Cw"/>
+                                            <constraint firstItem="WYs-Qg-7jM" firstAttribute="centerX" secondItem="VBb-f6-zLW" secondAttribute="centerX" id="OLo-bF-y4t"/>
+                                            <constraint firstAttribute="bottom" secondItem="DyU-w0-eyl" secondAttribute="bottom" id="P2s-dV-oG2"/>
+                                            <constraint firstItem="DyU-w0-eyl" firstAttribute="leading" secondItem="VBb-f6-zLW" secondAttribute="leading" id="tgJ-mX-3Ja"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" image="ConvertButtonImage">
-                                            <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedConvertButton" destination="yPN-bq-N5s" eventType="touchUpInside" id="cza-K4-Pn8"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant en $ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-nc-Dh0">
                                         <rect key="frame" x="0.0" y="290" width="359" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -121,8 +137,10 @@
                     <tabBarItem key="tabBarItem" title="" id="cEm-Ut-Hwv"/>
                     <navigationItem key="navigationItem" title="Taux de change" id="oGL-yl-RK4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="WYs-Qg-7jM" id="PQi-AI-rwV"/>
                         <outlet property="dollarTextField" destination="Htg-Vc-PmX" id="OQi-QE-Qrg"/>
                         <outlet property="euroTextField" destination="mxT-8V-B3O" id="WET-lR-Hbc"/>
+                        <outlet property="newConversionButton" destination="DyU-w0-eyl" id="bcU-WO-XH3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivZ-NZ-z6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

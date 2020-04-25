@@ -11,7 +11,11 @@ import UIKit
 class TauxDeChangeViewController: UIViewController {
     @IBOutlet weak var euroTextField: UITextField!
     @IBOutlet weak var dollarTextField: UITextField!
+    @IBOutlet weak var newConversionButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     var euroAmount: Double = 0.0
+    var dollarValue: Double = 0.0
 
     func removeKeyboard() {
         euroTextField.resignFirstResponder()
@@ -19,24 +23,29 @@ class TauxDeChangeViewController: UIViewController {
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
     }
-    func euroVerification() {
-        if euroTextField.text != nil {
-            if let euro = Double(euroTextField.text!) {
-                euroAmount = euro
-            }
+    func euroVerificationThenConversion() {
+        if let euro = Double(euroTextField.text!.replacingOccurrences(of: ",", with: ".")) {
+            euroAmount = euro
+            let dollarAmount = self.euroAmount * self.dollarValue
+            self.dollarTextField.text = "\(round(100*dollarAmount)/100)"
         } else {
             self.alerteVC()
         }
+    }
+    func newConversionButtonAndActivityIndicatorManager(inProgress: Bool) {
+        newConversionButton.isHidden = inProgress
+        activityIndicator.isHidden = !inProgress
     }
     @IBAction func tappedConvertButton() {
         if euroTextField.isFirstResponder == true {
             removeKeyboard()
         }
-        ConverterService.getCurrency { (success, converter) in
-            if success, let converter = converter {
-                self.euroVerification()
-                let dollarAmount = self.euroAmount * converter.dollardValues
-                self.dollarTextField.text = "\(round(100*dollarAmount)/100)"
+        self.newConversionButtonAndActivityIndicatorManager(inProgress: true)
+        ConverterService.shared.getCurrency { (success, converter) in
+            self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
+            if success && self.euroTextField.text != nil, let converter = converter {
+                self.dollarValue = converter.dollarValue
+                self.euroVerificationThenConversion()
             } else {
                 self.alerteVC()
             }
