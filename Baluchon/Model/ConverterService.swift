@@ -17,11 +17,11 @@ class ConverterService {
     private var usdRate: Double?
 
     init() {}
-
+// Init for tests by creating a double of the class.
     init(session: URLSession) {
         self.session = session
     }
-
+// Converts euro to dollar.
     func convertToUsd(euro: Double, callback: @escaping (Double?) -> Void) {
         if let usdRate = self.usdRate {
             callback(usdRate * euro)
@@ -36,7 +36,7 @@ class ConverterService {
             }
         }
     }
-
+// Checks the current dollar value and returns it.
     private func getCurrency(callback: @escaping (Double?) -> Void) {
         var request = URLRequest(url: ConverterService.converterUrl)
         request.httpMethod = "POST"

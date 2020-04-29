@@ -14,13 +14,14 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var dollarTextField: UITextField!
     @IBOutlet weak var newConversionButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
+// Creates an instance of ConverterService.
     private let convertService = ConverterService()
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
     }
-
+// Removes keyboard if shown and hide the button while converting euro to dollars by calling the convertToUsd func.
+// Displays an alerte if something goes wrong.
     @IBAction func tappedConvertButton() {
         if euroTextField.isFirstResponder == true {
             removeKeyboard()
@@ -40,16 +41,16 @@ class CurrencyViewController: UIViewController {
             self.alerteVC()
         }
     }
-
+// Shows the conversion button and hides the activityIndicator or the reverse depending on inProgress.
     private func newConversionButtonAndActivityIndicatorManager(inProgress: Bool) {
         newConversionButton.isHidden = inProgress
         activityIndicator.isHidden = !inProgress
     }
-
+// Removes the keyboard if displayed
     private func removeKeyboard() {
         euroTextField.resignFirstResponder()
     }
-
+// Shows an alert
     private func alerteVC() {
         let alerteVC = UIAlertController(title: "Erreur",
                                          message: "Une erreur est survenue, veuillez réessayer !",
