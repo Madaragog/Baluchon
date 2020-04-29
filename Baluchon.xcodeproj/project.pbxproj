@@ -13,13 +13,13 @@
 		8280D28A24544C3F002BAB20 /* ConverterServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */; };
 		8280D28C24544CDE002BAB20 /* Converter.json in Resources */ = {isa = PBXBuildFile; fileRef = 8280D28B24544CDE002BAB20 /* Converter.json */; };
 		8280D28E24544D32002BAB20 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280D28D24544D32002BAB20 /* FakeResponseData.swift */; };
-		829AF5952451A0F700CC0657 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829AF5942451A0F700CC0657 /* Converter.swift */; };
+		8280D290245456F5002BAB20 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280D28F245456F5002BAB20 /* URLSessionFake.swift */; };
 		829D95DE2450C3D10061D9DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 829D95DD2450C3D10061D9DC /* Default-568h@2x.png */; };
 		82CFE1A824500C20006F4DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE1A724500C20006F4DC4 /* AppDelegate.swift */; };
 		82CFE1AF24500C20006F4DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CFE1AD24500C20006F4DC4 /* Main.storyboard */; };
 		82CFE1B124500C21006F4DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CFE1B024500C21006F4DC4 /* Assets.xcassets */; };
 		82CFE1B424500C21006F4DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CFE1B224500C21006F4DC4 /* LaunchScreen.storyboard */; };
-		82CFE1C024502725006F4DC4 /* TauxDeChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE1BF24502725006F4DC4 /* TauxDeChangeViewController.swift */; };
+		82CFE1C024502725006F4DC4 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE1BF24502725006F4DC4 /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterServiceTests.swift; sourceTree = "<group>"; };
 		8280D28B24544CDE002BAB20 /* Converter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Converter.json; sourceTree = "<group>"; };
 		8280D28D24544D32002BAB20 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
-		829AF5942451A0F700CC0657 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		8280D28F245456F5002BAB20 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
 		829D95DD2450C3D10061D9DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		82CFE1A424500C20006F4DC4 /* Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CFE1A724500C20006F4DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		82CFE1B024500C21006F4DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82CFE1B324500C21006F4DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82CFE1B524500C21006F4DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82CFE1BF24502725006F4DC4 /* TauxDeChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TauxDeChangeViewController.swift; sourceTree = "<group>"; };
+		82CFE1BF24502725006F4DC4 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 			children = (
 				8280D28924544C3F002BAB20 /* ConverterServiceTests.swift */,
 				8280D28D24544D32002BAB20 /* FakeResponseData.swift */,
+				8280D28F245456F5002BAB20 /* URLSessionFake.swift */,
 				8280D28B24544CDE002BAB20 /* Converter.json */,
 				8280D28324544C28002BAB20 /* Info.plist */,
 			);
@@ -119,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				8209A86324509961007CF776 /* ConverterService.swift */,
-				829AF5942451A0F700CC0657 /* Converter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 		82CFE1BE24501242006F4DC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				82CFE1BF24502725006F4DC4 /* TauxDeChangeViewController.swift */,
+				82CFE1BF24502725006F4DC4 /* CurrencyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8280D28A24544C3F002BAB20 /* ConverterServiceTests.swift in Sources */,
+				8280D290245456F5002BAB20 /* URLSessionFake.swift in Sources */,
 				8280D28E24544D32002BAB20 /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82CFE1C024502725006F4DC4 /* TauxDeChangeViewController.swift in Sources */,
+				82CFE1C024502725006F4DC4 /* CurrencyViewController.swift in Sources */,
 				823EBB312450318700A8A2EB /* AppSceneDelegate.swift in Sources */,
 				8209A86424509961007CF776 /* ConverterService.swift in Sources */,
 				82CFE1A824500C20006F4DC4 /* AppDelegate.swift in Sources */,
-				829AF5952451A0F700CC0657 /* Converter.swift in Sources */,
 				826348EE2450B5B300FC892B /* APIKeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

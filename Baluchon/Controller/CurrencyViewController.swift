@@ -30,7 +30,8 @@ class CurrencyViewController: UIViewController {
             convertService.convertToUsd(euro: euro) { (usd) in
                 self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
                 if let usd = usd {
-                    self.dollarTextField.text = "\(round(100*usd)/100)".replacingOccurrences(of: ".", with: ",")
+                    let usdRounded = round(100*usd)/100
+                    self.dollarTextField.text = "\(usdRounded)".replacingOccurrences(of: ".", with: ",")
                 } else {
                     self.alerteVC()
                 }
