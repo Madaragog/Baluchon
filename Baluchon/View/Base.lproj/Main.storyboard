@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wlP-9v-Xav">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9N5-1q-Nnd" kind="relationship" relationship="viewControllers" id="C2S-Zo-Iov"/>
+                        <segue destination="gPA-op-RyF" kind="relationship" relationship="viewControllers" id="Zw6-1h-7yE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtV-hk-JWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,9 +32,11 @@
         <scene sceneID="joD-ij-bba">
             <objects>
                 <navigationController id="9N5-1q-Nnd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Taux de change" image="MoneyConvertorTabBarIcone" id="78z-eC-0WI"/>
+                    <tabBarItem key="tabBarItem" title="Taux de change" image="MoneyConvertorTabBarIcon" id="78z-eC-0WI">
+                        <color key="badgeColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lYC-cd-yr2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -44,41 +49,41 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znJ-ry-Fyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1374" y="-340"/>
+            <point key="canvasLocation" x="-1329" y="-1168"/>
         </scene>
         <!--Taux de change-->
         <scene sceneID="75r-Ha-3Ii">
             <objects>
                 <viewController id="yPN-bq-N5s" customClass="CurrencyViewController" customModule="Baluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PSL-Xi-FNU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E7Q-WX-dl6">
-                                <rect key="frame" x="8" y="56" width="584" height="380"/>
+                                <rect key="frame" x="8" y="100" width="398" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant en € :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTh-tk-KPn">
-                                        <rect key="frame" x="0.0" y="0.0" width="584" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insérez un montant" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mxT-8V-B3O">
-                                        <rect key="frame" x="0.0" y="56" width="584" height="34"/>
+                                        <rect key="frame" x="0.0" y="56" width="398" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBb-f6-zLW">
-                                        <rect key="frame" x="0.0" y="110" width="584" height="160"/>
+                                        <rect key="frame" x="0.0" y="110" width="398" height="160"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-Qg-7jM">
-                                                <rect key="frame" x="273.5" y="61.5" width="37" height="37"/>
+                                                <rect key="frame" x="180.5" y="61.5" width="37" height="37"/>
                                                 <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyU-w0-eyl">
-                                                <rect key="frame" x="0.0" y="0.0" width="584" height="160"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" image="ConvertButtonImage">
                                                     <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -100,13 +105,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant en $ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-nc-Dh0">
-                                        <rect key="frame" x="0.0" y="290" width="584" height="36"/>
+                                        <rect key="frame" x="0.0" y="290" width="398" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-Vc-PmX">
-                                        <rect key="frame" x="0.0" y="346" width="584" height="34"/>
+                                        <rect key="frame" x="0.0" y="346" width="398" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -148,11 +153,139 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-484" y="-340"/>
+            <point key="canvasLocation" x="-438" y="-1168"/>
+        </scene>
+        <!--Conversion de distance-->
+        <scene sceneID="uN4-43-9qr">
+            <objects>
+                <navigationController id="gPA-op-RyF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conversion de distance" image="DistanceConversionTabBarIcon" id="s3X-eS-8Dw">
+                        <color key="badgeColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Et-0K-sDh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zki-4f-N7c" kind="relationship" relationship="rootViewController" id="k2L-QL-CQw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBB-xf-dq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1330" y="-408"/>
+        </scene>
+        <!--Conversion de distance-->
+        <scene sceneID="PBV-EM-Kiy">
+            <objects>
+                <viewController id="zki-4f-N7c" customClass="ConversionViewController" customModule="Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZM1-OT-M8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uvj-zD-gy3">
+                                <rect key="frame" x="8" y="100" width="398" height="380"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Miles :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W66-5o-78v">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insérez un nombre" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UZG-kZ-0If">
+                                        <rect key="frame" x="0.0" y="56" width="398" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwW-32-svF">
+                                        <rect key="frame" x="0.0" y="110" width="398" height="160"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-rY-SMz">
+                                                <rect key="frame" x="180.5" y="61.5" width="37" height="37"/>
+                                                <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1o-Lr-CJP">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" image="ConvertButtonImage">
+                                                    <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="conversionButton" destination="zki-4f-N7c" eventType="touchUpInside" id="wVv-Be-iVr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="c1o-Lr-CJP" secondAttribute="bottom" id="1He-qC-RTe"/>
+                                            <constraint firstAttribute="trailing" secondItem="c1o-Lr-CJP" secondAttribute="trailing" id="Osj-SZ-mrl"/>
+                                            <constraint firstAttribute="height" constant="160" id="UtV-Qd-FNz"/>
+                                            <constraint firstItem="c1o-Lr-CJP" firstAttribute="top" secondItem="qwW-32-svF" secondAttribute="top" id="VCU-hv-jn9"/>
+                                            <constraint firstItem="rL8-rY-SMz" firstAttribute="centerY" secondItem="qwW-32-svF" secondAttribute="centerY" id="iev-8g-LQ3"/>
+                                            <constraint firstItem="rL8-rY-SMz" firstAttribute="centerX" secondItem="qwW-32-svF" secondAttribute="centerX" id="mTE-D9-3oh"/>
+                                            <constraint firstItem="c1o-Lr-CJP" firstAttribute="leading" secondItem="qwW-32-svF" secondAttribute="leading" id="rU3-mR-T92"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de kilomètres :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dH-PC-MhG">
+                                        <rect key="frame" x="0.0" y="290" width="398" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-9P-8Fd">
+                                        <rect key="frame" x="0.0" y="346" width="398" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" smartQuotesType="no"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uvj-zD-gy3" firstAttribute="leading" secondItem="ybN-ae-QOP" secondAttribute="leading" constant="8" id="4ll-OA-d2l"/>
+                            <constraint firstItem="ybN-ae-QOP" firstAttribute="trailing" secondItem="uvj-zD-gy3" secondAttribute="trailing" constant="8" id="Jje-bR-0Hl"/>
+                            <constraint firstItem="uvj-zD-gy3" firstAttribute="top" secondItem="ybN-ae-QOP" secondAttribute="top" constant="12" id="vkW-YT-Rsh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ybN-ae-QOP"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TWm-Oz-IuZ" appends="YES" id="QaV-6S-pGX"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="KbG-qB-v4t"/>
+                    <navigationItem key="navigationItem" title="Conversion de distance" id="NKg-eD-1Re"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rL8-rY-SMz" id="7e4-hK-5Nf"/>
+                        <outlet property="kilometersValue" destination="tRK-9P-8Fd" id="zn4-TR-AQC"/>
+                        <outlet property="milesValue" destination="UZG-kZ-0If" id="5fO-jV-dLX"/>
+                        <outlet property="newConversionButton" destination="c1o-Lr-CJP" id="dVF-ge-zmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kTD-dh-vuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TWm-Oz-IuZ">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="zki-4f-N7c" id="r4m-kE-oBa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-439" y="-408"/>
         </scene>
     </scenes>
     <resources>
         <image name="ConvertButtonImage" width="617" height="262"/>
-        <image name="MoneyConvertorTabBarIcone" width="30" height="30"/>
+        <image name="DistanceConversionTabBarIcon" width="30" height="30"/>
+        <image name="MoneyConvertorTabBarIcon" width="30" height="30"/>
     </resources>
 </document>

@@ -39,6 +39,7 @@ class CurrencyViewController: UIViewController {
             }
         } else {
             self.alerteVC()
+            self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
         }
     }
 // Shows the conversion button and hides the activityIndicator or the reverse depending on inProgress.
