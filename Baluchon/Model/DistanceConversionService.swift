@@ -8,12 +8,11 @@
 
 import Foundation
 
-class ConversionService {
+class DistanceConversionService {
     private let oneMileInKm = 1.609
-
+// Converts miles to kilometers
     func milesToKilometers(miles: Double) -> Double {
         let kilometers = miles * oneMileInKm
-        let kilometersRounded = round(1000*kilometers)/1000
-        return kilometersRounded
+        return kilometers
     }
 }

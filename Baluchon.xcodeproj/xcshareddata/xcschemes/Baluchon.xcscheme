@@ -33,9 +33,39 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8280D26024544B26002BAB20"
-               BuildableName = "ConverterServiceTests.xctest"
-               BlueprintName = "ConverterServiceTests"
+               BlueprintIdentifier = "8280D27E24544C28002BAB20"
+               BuildableName = "CurrencyConversionServiceTests.xctest"
+               BlueprintName = "CurrencyConversionServiceTests"
+               ReferencedContainer = "container:Baluchon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "82D81B09245E129E00F96E51"
+               BuildableName = "ConversionServiceTests.xctest"
+               BlueprintName = "ConversionServiceTests"
+               ReferencedContainer = "container:Baluchon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8257EDFD2461F393009D2650"
+               BuildableName = "CurrencyConverisonServiceTests.xctest"
+               BlueprintName = "CurrencyConverisonServiceTests"
+               ReferencedContainer = "container:Baluchon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "82AC282F2461F57E00ECA928"
+               BuildableName = "DistanceConversionServiceTests.xctest"
+               BlueprintName = "DistanceConversionServiceTests"
                ReferencedContainer = "container:Baluchon.xcodeproj">
             </BuildableReference>
          </TestableReference>

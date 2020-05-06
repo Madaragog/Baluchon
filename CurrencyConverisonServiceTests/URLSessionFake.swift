@@ -9,9 +9,9 @@
 import Foundation
 
 class URLSessionFake: URLSession {
-    var data: Data?
-    var response: URLResponse?
-    var error: Error?
+    let data: Data?
+    let response: URLResponse?
+    let error: Error?
 
     init(data: Data?, response: URLResponse?, error: Error?) {
         self.data = data

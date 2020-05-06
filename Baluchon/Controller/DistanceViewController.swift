@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class DistanceViewController: UIViewController {
 
     @IBOutlet weak var milesValue: UITextField!
     @IBOutlet weak var kilometersValue: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var newConversionButton: UIButton!
 
-    private let conversionService = ConversionService()
+    private let conversionService = DistanceConversionService()
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
@@ -30,7 +30,8 @@ class ConversionViewController: UIViewController {
         self.newConversionButtonAndActivityIndicatorManager(inProgress: true)
         if let miles = Double(milesValue.text!.replacingOccurrences(of: ",", with: ".")) {
             let kilometers = conversionService.milesToKilometers(miles: miles)
-            self.kilometersValue.text = "\(kilometers)".replacingOccurrences(of: ".", with: ",")
+            let kilometersRounded = round(1000*kilometers)/1000
+            self.kilometersValue.text = "\(kilometersRounded)".replacingOccurrences(of: ".", with: ",")
             newConversionButtonAndActivityIndicatorManager(inProgress: false)
         } else {
             self.alerteVC()

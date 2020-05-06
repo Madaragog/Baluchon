@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConverterService {
+class CurrencyConversionService {
     private static let key = APIKeyManager().fixerKey
     private static let converterUrl = URL(string: "http://data.fixer.io/api/latest?access_key=\(key)&symbols=USD,EUR")!
 
@@ -38,7 +38,7 @@ class ConverterService {
     }
 // Checks the current dollar value and returns it.
     private func getCurrency(callback: @escaping (Double?) -> Void) {
-        var request = URLRequest(url: ConverterService.converterUrl)
+        var request = URLRequest(url: CurrencyConversionService.converterUrl)
         request.httpMethod = "POST"
 
         task?.cancel()

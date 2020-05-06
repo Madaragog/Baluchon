@@ -1,33 +1,39 @@
 //
-//  TauxDeChangeViewController.swift
+//  TranslationViewController.swift
 //  Baluchon
 //
-//  Created by Cedric on 22/04/2020.
+//  Created by Cedric on 05/05/2020.
 //  Copyright © 2020 Cedric. All rights reserved.
 //
 
 import UIKit
 
-class CurrencyViewController: UIViewController {
-
-    @IBOutlet weak var euroTextField: UITextField!
-    @IBOutlet weak var dollarTextField: UITextField!
-    @IBOutlet weak var newConversionButton: UIButton!
+class TranslationViewController: UIViewController {
+    @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-// Creates an instance of ConverterService.
-    private let convertService = CurrencyConversionService()
+    @IBOutlet weak var translationButton: UIButton!
+    @IBOutlet weak var textTranslated: UITextView!
+
+    private let translationService = TranslationService()
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
     }
-// Removes keyboard if shown and hide the button while converting euro to dollars by calling the convertToUsd func.
-// Displays an alerte if something goes wrong.
-    @IBAction func tappedConvertButton() {
-        if euroTextField.isFirstResponder == true {
+
+    @IBAction func tappedTranslationButton() {
+        if textToTranslate.isFirstResponder == true {
             removeKeyboard()
         }
-        self.newConversionButtonAndActivityIndicatorManager(inProgress: true)
-        if let euro = Double(euroTextField.text!.replacingOccurrences(of: ",", with: ".")) {
+        self.translationButtonAndActivityIndicatorManager(inProgress: true)
+        if textToTranslate.text.isEmpty == false {
+            let text = textToTranslate.text!
+            translationService.getTranslation(texte: text) { (translatedText) in
+                <#code#>
+            }
+            
+            
+            
+            
             convertService.convertToUsd(euro: euro) { (usd) in
                 self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
                 if let usd = usd {
@@ -39,17 +45,17 @@ class CurrencyViewController: UIViewController {
             }
         } else {
             self.alerteVC()
-            self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
+            self.translationButtonAndActivityIndicatorManager(inProgress: false)
         }
     }
-// Shows the conversion button and hides the activityIndicator or the reverse depending on the progress.
-    private func newConversionButtonAndActivityIndicatorManager(inProgress: Bool) {
-        newConversionButton.isHidden = inProgress
+// Shows the translation button and hides the activityIndicator or the reverse depending on the progress.
+    private func translationButtonAndActivityIndicatorManager(inProgress: Bool) {
+        translationButton.isHidden = inProgress
         activityIndicator.isHidden = !inProgress
     }
 // Removes the keyboard if displayed
     private func removeKeyboard() {
-        euroTextField.resignFirstResponder()
+        textToTranslate.resignFirstResponder()
     }
 // Shows an alert
     private func alerteVC() {

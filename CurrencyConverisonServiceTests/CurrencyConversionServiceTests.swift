@@ -9,13 +9,13 @@
 @testable import Baluchon
 import XCTest
 
-class ConverterServiceTests: XCTestCase {
+class CurrencyConversionServiceTests: XCTestCase {
     let euro: Double = 10.23
 
     func testConvertToUsdShouldPostFailCallbackIfError() {
 //        Given
-        let converterService = ConverterService(session: URLSessionFake(data: nil, response: nil,
-                                                                        error: FakeResponseData.error))
+        let converterService = CurrencyConversionService(session: URLSessionFake(data: nil, response: nil,
+                                                                                 error: FakeResponseData.error))
 //        When
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
@@ -28,7 +28,8 @@ class ConverterServiceTests: XCTestCase {
 
     func testConvertToUsdShouldPostFailCallbackIfNoData() {
 //        Given
-        let converterService = ConverterService(session: URLSessionFake(data: nil, response: nil, error: nil))
+        let converterService = CurrencyConversionService(session: URLSessionFake(data: nil, response: nil,
+                                                                                 error: nil))
 //        When
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
@@ -41,8 +42,9 @@ class ConverterServiceTests: XCTestCase {
 
     func testConvertToUsdShouldPostFailCallbackIfIncorrectResponse() {
 //        Given
-        let converterService = ConverterService(session: URLSessionFake(data: FakeResponseData.converterCorrectData,
-                                                                    response: FakeResponseData.responseKo, error: nil))
+        let converterService = CurrencyConversionService(session: URLSessionFake(
+                                                            data: FakeResponseData.converterCorrectData,
+                                                            response: FakeResponseData.responseKo, error: nil))
 //        When
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
@@ -55,8 +57,9 @@ class ConverterServiceTests: XCTestCase {
 
     func testConvertToUsdShouldPostFailCallbackIfIncorrectData() {
 //        Given
-        let converterService = ConverterService(session: URLSessionFake(data: FakeResponseData.converterIncorrectData,
-                                                                    response: FakeResponseData.responseOk, error: nil))
+        let converterService = CurrencyConversionService(session: URLSessionFake(
+                                                            data: FakeResponseData.converterIncorrectData,
+                                                            response: FakeResponseData.responseOk, error: nil))
 //        When
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
@@ -69,8 +72,9 @@ class ConverterServiceTests: XCTestCase {
 
     func testConvertToUsdShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
 //        Given
-        let converterService = ConverterService(session: URLSessionFake(data: FakeResponseData.converterCorrectData,
-                                                                    response: FakeResponseData.responseOk, error: nil))
+        let converterService = CurrencyConversionService(session: URLSessionFake(
+                                                            data: FakeResponseData.converterCorrectData,
+                                                        response: FakeResponseData.responseOk, error: nil))
 //        When
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
