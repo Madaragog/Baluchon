@@ -19,28 +19,21 @@ class TranslationViewController: UIViewController {
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
     }
-
+// Removes keyboard if shown and hides the button while translating by calling the getTranslation func.
+// Displays an alerte if something goes wrong.
     @IBAction func tappedTranslationButton() {
         if textToTranslate.isFirstResponder == true {
             removeKeyboard()
         }
         self.translationButtonAndActivityIndicatorManager(inProgress: true)
-        if textToTranslate.text.isEmpty == false {
-            let text = textToTranslate.text!
-            translationService.getTranslation(texte: text) { (translatedText) in
-                <#code#>
-            }
-            
-            
-            
-            
-            convertService.convertToUsd(euro: euro) { (usd) in
-                self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
-                if let usd = usd {
-                    let usdRounded = round(100*usd)/100
-                    self.dollarTextField.text = "\(usdRounded)".replacingOccurrences(of: ".", with: ",")
+        if textToTranslate.text.isEmpty == false, let textToTranslate = self.textToTranslate.text {
+            translationService.getTranslation(text: textToTranslate) { (translatedText) in
+                self.translationButtonAndActivityIndicatorManager(inProgress: false)
+                if let translatedText = translatedText {
+                    self.textTranslated.text = "\(translatedText)"
                 } else {
                     self.alerteVC()
+                    self.translationButtonAndActivityIndicatorManager(inProgress: false)
                 }
             }
         } else {

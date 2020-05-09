@@ -20,7 +20,7 @@ class CurrencyViewController: UIViewController {
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         removeKeyboard()
     }
-// Removes keyboard if shown and hide the button while converting euro to dollars by calling the convertToUsd func.
+// Removes keyboard if shown and hides the button while converting euro to dollars by calling the convertToUsd func.
 // Displays an alerte if something goes wrong.
     @IBAction func tappedConvertButton() {
         if euroTextField.isFirstResponder == true {
@@ -35,6 +35,7 @@ class CurrencyViewController: UIViewController {
                     self.dollarTextField.text = "\(usdRounded)".replacingOccurrences(of: ".", with: ",")
                 } else {
                     self.alerteVC()
+                    self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
                 }
             }
         } else {

@@ -9,9 +9,9 @@
 import Foundation
 
 class TranslationService {
-    private static let key = APIKeyManager().fixerKey
+    private static let key = APIKeyManager().translationKey
     private static let translationUrl = URL(
-        string: "http://data.fixer.io/api/latest?access_key=\(key)")!
+        string: "https://translation.googleapis.com/language/translate/v2?key=\(key)")!
     private var task: URLSessionDataTask?
     private var session = URLSession(configuration: .default)
 
@@ -26,10 +26,10 @@ class TranslationService {
         return parameters
     }
 // Gets the translation and returns it.
-    func getTranslation(texte: String, callback: @escaping (String?) -> Void) {
+    func getTranslation(text: String, callback: @escaping (String?) -> Void) {
         var request = URLRequest(url: TranslationService.translationUrl)
         request.httpMethod = "POST"
-        request.httpBody = setParameters(text: texte).data(using: String.Encoding.utf8)
+        request.httpBody = setParameters(text: text).data(using: String.Encoding.utf8)
 
         task?.cancel()
         task = session.dataTask(with: request) { (data, response, error) in
@@ -43,15 +43,23 @@ class TranslationService {
                     return
                 }
                 guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                    let rates = json["rates"] as? [String: Double] else {
+                    let textData = json["data"] as? [String: Any] else {
                         callback(nil)
                         return
                 }
-                guard let usd = rates["USD"] else {
+                guard let translation = textData["translations"] as? [Dictionary<String, String>] else {
                     callback(nil)
                     return
                 }
-                callback(texte)
+                guard let god = translation.first else {
+                    callback(nil)
+                    return
+                }
+                guard let translatedText = god["translatedText"] else {
+                    callback(nil)
+                    return
+                }
+                callback("\(translatedText)")
             }
         }
         task?.resume()
