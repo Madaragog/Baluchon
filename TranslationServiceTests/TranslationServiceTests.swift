@@ -1,33 +1,31 @@
 //
-//  ConverterServiceTests.swift
-//  ConverterServiceTests
+//  TranslationServiceTests.swift
+//  TranslationServiceTests
 //
-//  Created by Cedric on 25/04/2020.
+//  Created by Cedric on 11/05/2020.
 //  Copyright © 2020 Cedric. All rights reserved.
 //
-
 @testable import Baluchon
 import XCTest
 
 class CurrencyConversionServiceTests: XCTestCase {
-    let euro: Double = 10.23
-    let expectedUsd: Double = 11.070957150000002
+    let textToTranslate = "Bonjour"
 
-    func testConvertToUsdShouldPostFailCallbackIfError() {
+    func testGetTranslationShouldPostFailCallbackIfError() {
 //        Given
-        let converterService = CurrencyConversionService(session: URLSessionFake(data: nil, response: nil,
+        let translationService = TranslationService(session: URLSessionFake(data: nil, response: nil,
                                                                                  error: FakeResponseData.error))
 //        When
-        let expectaction = XCTestExpectation(description: "trouver un sens.")
-        converterService.convertToUsd(euro: euro) { (usd) in
+        let expectaction = XCTestExpectation(description: "Wait for queue change.")
+        translationService.getTranslation(text: textToTranslate) { (translatedTexte) in
 //        Then
-            XCTAssertNil(usd)
+            XCTAssertNil(translatedTexte)
             expectaction.fulfill()
         }
         wait(for: [expectaction], timeout: 0.01)
     }
-
-    func testConvertToUsdShouldPostFailCallbackIfNoData() {
+/*
+    func testGetTranslationShouldPostFailCallbackIfNoData() {
 //        Given
         let converterService = CurrencyConversionService(session: URLSessionFake(data: nil, response: nil,
                                                                                  error: nil))
@@ -80,28 +78,12 @@ class CurrencyConversionServiceTests: XCTestCase {
         let expectaction = XCTestExpectation(description: "Wait for queue change.")
         converterService.convertToUsd(euro: euro) { (usd) in
 //        Then
+            let usdRate = 1.082205
             XCTAssertNotNil(usd)
-            XCTAssertEqual(self.expectedUsd, usd!)
+            XCTAssertEqual(usdRate * self.euro, usd!)
             expectaction.fulfill()
         }
         wait(for: [expectaction], timeout: 0.01)
     }
-    
-    func testfConvertToUsdShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
-    //        Given
-            let converterService = CurrencyConversionService(session: URLSessionFake(
-                                                                data: FakeResponseData.converterCorrectData,
-                                                            response: FakeResponseData.responseOk, error: nil))
-    //        When
-            let expectaction = XCTestExpectation(description: "Wait for queue change.")
-            converterService.convertToUsd(euro: euro) { (usd) in
-    //        Then
-                converterService.convertToUsd(euro: self.euro) { (usd) in
-                    
-                    expectaction.fulfill()
-                }
-            }
-            wait(for: [expectaction], timeout: 0.01)
-        
-        }
+ */
 }

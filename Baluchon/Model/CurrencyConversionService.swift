@@ -37,7 +37,7 @@ class CurrencyConversionService {
         }
     }
 // Checks the current dollar value and returns it.
-    private func getCurrency(callback: @escaping (Double?) -> Void) {
+    func getCurrency(callback: @escaping (Double?) -> Void) {
         var request = URLRequest(url: CurrencyConversionService.converterUrl)
         request.httpMethod = "POST"
 

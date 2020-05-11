@@ -9,13 +9,13 @@
 import XCTest
 
 class DistanceConversionServiceTests: XCTestCase {
-    func testGiven10milesWhenConvertingThenResultShouldBe1Point609MultiplicatedBy10() {
+    func testGivenMilesWhenConvertingThenResultShouldBeTheEquivalentInKms() {
 //        Given
-        let oneMileInKm = 1.609
+        let expectedKilometer = 16.09
         let miles = 10.0
 //        When
-        let distanceConversionService = DistanceConversionService().milesToKilometers(miles: miles)
+        let distanceInKilometer = DistanceConversionService().milesToKilometers(miles: miles)
 //        Then
-        XCTAssertEqual(distanceConversionService, oneMileInKm * miles)
+        XCTAssertEqual(expectedKilometer, distanceInKilometer)
     }
 }

@@ -42,26 +42,27 @@ class TranslationService {
                     callback(nil)
                     return
                 }
-                guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                    let textData = json["data"] as? [String: Any] else {
-                        callback(nil)
-                        return
-                }
-                guard let translation = textData["translations"] as? [Dictionary<String, String>] else {
+                guard let googleResponse = try? JSONDecoder().decode(GoogleResponse.self, from: data) else {
                     callback(nil)
                     return
                 }
-                guard let god = translation.first else {
-                    callback(nil)
-                    return
-                }
-                guard let translatedText = god["translatedText"] else {
-                    callback(nil)
-                    return
-                }
-                callback("\(translatedText)")
+                callback(googleResponse.data.translations[0].translatedText)
             }
         }
         task?.resume()
     }
+}
+
+struct GoogleResponse: Codable {
+    let data: DataClass
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+    let translations: [Translation]
+}
+
+// MARK: - Translation
+struct Translation: Codable {
+    let translatedText: String
 }
