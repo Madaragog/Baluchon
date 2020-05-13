@@ -11,11 +11,20 @@ import XCTest
 class DistanceConversionServiceTests: XCTestCase {
     func testGivenMilesWhenConvertingThenResultShouldBeTheEquivalentInKms() {
 //        Given
-        let expectedKilometer = 16.09
+        let expectedKilometers = 16.09
         let miles = 10.0
 //        When
         let distanceInKilometer = DistanceConversionService().milesToKilometers(miles: miles)
 //        Then
-        XCTAssertEqual(expectedKilometer, distanceInKilometer)
+        XCTAssertEqual(expectedKilometers, distanceInKilometer)
+    }
+    func testGivenKilometersWhenConvertingThenResultShouldBeTheEquivalentInMiles() {
+//        Given
+        let expectedMiles = 7.4958
+        let kilometers = 12.09
+//        When
+        let distanceInMiles = DistanceConversionService().kilometersToMiles(kilometers: kilometers)
+//        Then
+        XCTAssertEqual(expectedMiles, distanceInMiles)
     }
 }

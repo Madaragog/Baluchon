@@ -52,18 +52,32 @@ class CurrencyConversionService {
                     callback(nil)
                     return
                 }
-                guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                    let rates = json["rates"] as? [String: Double] else {
-                        callback(nil)
-                        return
-                }
-                guard let usd = rates["USD"] else {
+                guard let fixerResponse = try? JSONDecoder().decode(FixerResponse.self, from: data) else {
                     callback(nil)
                     return
                 }
-                callback(usd)
+                callback(fixerResponse.rates.usd)
             }
         }
         task?.resume()
+    }
+}
+
+// MARK: - Welcome
+struct FixerResponse: Codable {
+    let success: Bool
+    let timestamp: Int
+    let base, date: String
+    let rates: Rates
+}
+
+// MARK: - Rates
+struct Rates: Codable {
+    let usd: Double
+    let eur: Int
+
+    enum CodingKeys: String, CodingKey {
+        case usd = "USD"
+        case eur = "EUR"
     }
 }

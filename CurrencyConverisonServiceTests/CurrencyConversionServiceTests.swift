@@ -86,7 +86,7 @@ class CurrencyConversionServiceTests: XCTestCase {
         }
         wait(for: [expectaction], timeout: 0.01)
     }
-    
+
     func testfConvertToUsdShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
     //        Given
             let converterService = CurrencyConversionService(session: URLSessionFake(
@@ -94,14 +94,12 @@ class CurrencyConversionServiceTests: XCTestCase {
                                                             response: FakeResponseData.responseOk, error: nil))
     //        When
             let expectaction = XCTestExpectation(description: "Wait for queue change.")
-            converterService.convertToUsd(euro: euro) { (usd) in
+            converterService.convertToUsd(euro: euro) { (_) in
     //        Then
-                converterService.convertToUsd(euro: self.euro) { (usd) in
-                    
+                converterService.convertToUsd(euro: self.euro) { (_) in
                     expectaction.fulfill()
                 }
             }
             wait(for: [expectaction], timeout: 0.01)
-        
         }
 }
