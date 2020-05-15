@@ -20,7 +20,7 @@ class DistanceConversionServiceTests: XCTestCase {
     }
     func testGivenKilometersWhenConvertingThenResultShouldBeTheEquivalentInMiles() {
 //        Given
-        let expectedMiles = 7.4958
+        let expectedMiles = 7.51237539
         let kilometers = 12.09
 //        When
         let distanceInMiles = DistanceConversionService().kilometersToMiles(kilometers: kilometers)

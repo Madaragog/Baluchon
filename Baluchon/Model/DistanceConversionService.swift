@@ -10,7 +10,7 @@ import Foundation
 
 class DistanceConversionService {
     private let oneMileInKm = 1.609
-    private let oneKmInMile = 0.62
+    private let oneKmInMile = 0.621371
 // Converts miles to kilometers
     func milesToKilometers(miles: Double) -> Double {
         let kilometers = miles * oneMileInKm

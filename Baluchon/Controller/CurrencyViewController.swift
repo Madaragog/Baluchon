@@ -35,7 +35,6 @@ class CurrencyViewController: UIViewController {
                     self.dollarTextField.text = "\(usdRounded)".replacingOccurrences(of: ".", with: ",")
                 } else {
                     self.alerteVC()
-                    self.newConversionButtonAndActivityIndicatorManager(inProgress: false)
                 }
             }
         } else {

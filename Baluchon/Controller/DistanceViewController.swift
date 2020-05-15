@@ -42,15 +42,15 @@ class DistanceViewController: UIViewController {
 // If any error occurs, a message is diplayed
     @IBAction func tappedKmsToMilesConversionButton(_ sender: UIButton) {
         removeKeyboard()
-        self.kmsButtonAndActivityIndicatorManager(inProgress: true)
+        self.kmsToMilesButtonAndActivityIndicatorManager(inProgress: true)
         if let kilometers = Double(kilometersValue.text!.replacingOccurrences(of: ",", with: ".")) {
             let miles = conversionService.kilometersToMiles(kilometers: kilometers)
             let milesRounded = round(1000*miles)/1000
             self.milesValue.text = "\(milesRounded)".replacingOccurrences(of: ".", with: ",")
-            kmsButtonAndActivityIndicatorManager(inProgress: false)
+            kmsToMilesButtonAndActivityIndicatorManager(inProgress: false)
         } else {
             self.alerteVC()
-            kmsButtonAndActivityIndicatorManager(inProgress: false)
+            kmsToMilesButtonAndActivityIndicatorManager(inProgress: false)
         }
     }
 // Shows the milesToKms conversion button and hides the activityIndicator or the reverse depending on inProgress.
@@ -59,7 +59,7 @@ class DistanceViewController: UIViewController {
         activityIndicator.isHidden = !inProgress
     }
 // Shows the kmsToMiles conversion button and hides the activityIndicator or the reverse depending on inProgress.
-    private func kmsButtonAndActivityIndicatorManager(inProgress: Bool) {
+    private func kmsToMilesButtonAndActivityIndicatorManager(inProgress: Bool) {
         kmsToMilesConversionButton.isHidden = inProgress
         activityIndicator.isHidden = !inProgress
     }

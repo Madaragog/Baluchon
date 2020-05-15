@@ -33,7 +33,6 @@ class TranslationViewController: UIViewController {
                     self.textTranslated.text = "\(translatedText)"
                 } else {
                     self.alerteVC()
-                    self.translationButtonAndActivityIndicatorManager(inProgress: false)
                 }
             }
         } else {

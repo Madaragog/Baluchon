@@ -23,6 +23,7 @@
                         <segue destination="9N5-1q-Nnd" kind="relationship" relationship="viewControllers" id="C2S-Zo-Iov"/>
                         <segue destination="gPA-op-RyF" kind="relationship" relationship="viewControllers" id="Zw6-1h-7yE"/>
                         <segue destination="O8G-Em-PeA" kind="relationship" relationship="viewControllers" id="hul-II-OaK"/>
+                        <segue destination="orj-7w-KO4" kind="relationship" relationship="viewControllers" id="B6t-ss-1O3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtV-hk-JWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -430,6 +431,158 @@
             </objects>
             <point key="canvasLocation" x="-439" y="376"/>
         </scene>
+        <!--Météo-->
+        <scene sceneID="rz1-bm-ReD">
+            <objects>
+                <navigationController id="orj-7w-KO4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Météo" image="WeatherTabBarIcon" id="eWb-pn-0Dl">
+                        <color key="badgeColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h20-Mk-QnI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z1D-Bw-D5M" kind="relationship" relationship="rootViewController" id="VFy-Uo-tpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lm-O2-DBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1330" y="1166"/>
+        </scene>
+        <!--Météo-->
+        <scene sceneID="q5z-OQ-I5e">
+            <objects>
+                <viewController id="Z1D-Bw-D5M" customClass="WeatherViewController" customModule="Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ep0-RT-zoN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-Mo-nF6">
+                                <rect key="frame" x="8" y="100" width="398" height="560"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York City :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-xp-vmn">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oX6-DZ-DOn">
+                                        <rect key="frame" x="0.0" y="56" width="398" height="164"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRQ-yq-u9t">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9G-Bt-0mB">
+                                                <rect key="frame" x="0.0" y="40" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-qd-3f3">
+                                                <rect key="frame" x="0.0" y="90" width="398" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCO-fb-zOP">
+                                                <rect key="frame" x="0.0" y="130" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udk-lc-CUv">
+                                        <rect key="frame" x="0.0" y="240" width="398" height="80"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-g6-K6p">
+                                                <rect key="frame" x="180.5" y="21.5" width="37" height="37"/>
+                                                <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K6-Kb-tAC">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" image="WeatherRefreshImage">
+                                                    <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80" scale="default" weight="medium"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7QR-o2-jJf"/>
+                                            <constraint firstItem="4K6-Kb-tAC" firstAttribute="leading" secondItem="Udk-lc-CUv" secondAttribute="leading" id="9ex-Th-mIx"/>
+                                            <constraint firstAttribute="bottom" secondItem="4K6-Kb-tAC" secondAttribute="bottom" id="N9m-om-FZI"/>
+                                            <constraint firstItem="4K6-Kb-tAC" firstAttribute="top" secondItem="Udk-lc-CUv" secondAttribute="top" id="Ng4-5h-1oT"/>
+                                            <constraint firstItem="YD8-g6-K6p" firstAttribute="centerY" secondItem="Udk-lc-CUv" secondAttribute="centerY" id="Qm8-hR-oEV"/>
+                                            <constraint firstItem="YD8-g6-K6p" firstAttribute="centerX" secondItem="Udk-lc-CUv" secondAttribute="centerX" id="Uga-YZ-vVX"/>
+                                            <constraint firstAttribute="trailing" secondItem="4K6-Kb-tAC" secondAttribute="trailing" id="tk3-b0-BHi"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rennes :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-04-wXQ">
+                                        <rect key="frame" x="0.0" y="340" width="398" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-Jq-ANn">
+                                        <rect key="frame" x="0.0" y="396" width="398" height="164"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsN-V2-QMC">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j29-kJ-rL0">
+                                                <rect key="frame" x="0.0" y="40" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-EV-tTG">
+                                                <rect key="frame" x="0.0" y="90" width="398" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-mh-olR">
+                                                <rect key="frame" x="0.0" y="130" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="FwZ-UH-h0t" firstAttribute="trailing" secondItem="eeh-Mo-nF6" secondAttribute="trailing" constant="8" id="2Ct-ni-5lX"/>
+                            <constraint firstItem="eeh-Mo-nF6" firstAttribute="top" secondItem="FwZ-UH-h0t" secondAttribute="top" constant="12" id="JiX-3D-Lrl"/>
+                            <constraint firstItem="eeh-Mo-nF6" firstAttribute="leading" secondItem="FwZ-UH-h0t" secondAttribute="leading" constant="8" id="sIt-7O-bAk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FwZ-UH-h0t"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cQ8-eZ-qHo" appends="YES" id="KPC-EI-U6e"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="86Y-tE-eAx"/>
+                    <navigationItem key="navigationItem" title="Météo" id="nAV-Uq-N15"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4W-Kz-T4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cQ8-eZ-qHo"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="1166"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ConvertButtonImage" width="617" height="262"/>
@@ -437,6 +590,8 @@
         <image name="MoneyConvertorTabBarIcon" width="30" height="30"/>
         <image name="TranslateButtonImage" width="566" height="222"/>
         <image name="TranslationTabBarIcon" width="30" height="30"/>
+        <image name="WeatherRefreshImage" width="529" height="113"/>
+        <image name="WeatherTabBarIcon" width="30" height="30"/>
         <image name="down arrow" width="360" height="360"/>
         <image name="up arrow" width="360" height="360"/>
     </resources>

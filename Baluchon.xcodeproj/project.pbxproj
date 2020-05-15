@@ -29,6 +29,8 @@
 		82D0528F24620C5000BEC228 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0528E24620C5000BEC228 /* TranslationService.swift */; };
 		82D81B03245DF16000F96E51 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D81B02245DF16000F96E51 /* DistanceViewController.swift */; };
 		82D81B05245DFAC300F96E51 /* DistanceConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D81B04245DFAC300F96E51 /* DistanceConversionService.swift */; };
+		82DCBC72246E4506000D959B /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCBC71246E4506000D959B /* WeatherService.swift */; };
+		82DCBC74246E477C000D959B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCBC73246E477C000D959B /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		82D0528E24620C5000BEC228 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		82D81B02245DF16000F96E51 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		82D81B04245DFAC300F96E51 /* DistanceConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConversionService.swift; sourceTree = "<group>"; };
+		82DCBC71246E4506000D959B /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		82DCBC73246E477C000D959B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 				8209A86324509961007CF776 /* CurrencyConversionService.swift */,
 				82D81B04245DFAC300F96E51 /* DistanceConversionService.swift */,
 				82D0528E24620C5000BEC228 /* TranslationService.swift */,
+				82DCBC71246E4506000D959B /* WeatherService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				82CFE1BF24502725006F4DC4 /* CurrencyViewController.swift */,
 				82D81B02245DF16000F96E51 /* DistanceViewController.swift */,
 				82AC283A2461FD5300ECA928 /* TranslationViewController.swift */,
+				82DCBC73246E477C000D959B /* WeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DCBC72246E4506000D959B /* WeatherService.swift in Sources */,
 				82AC283B2461FD5300ECA928 /* TranslationViewController.swift in Sources */,
 				82CFE1C024502725006F4DC4 /* CurrencyViewController.swift in Sources */,
 				82D81B05245DFAC300F96E51 /* DistanceConversionService.swift in Sources */,
@@ -443,6 +450,7 @@
 				82CFE1A824500C20006F4DC4 /* AppDelegate.swift in Sources */,
 				82D81B03245DF16000F96E51 /* DistanceViewController.swift in Sources */,
 				826348EE2450B5B300FC892B /* APIKeyManager.swift in Sources */,
+				82DCBC74246E477C000D959B /* WeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
