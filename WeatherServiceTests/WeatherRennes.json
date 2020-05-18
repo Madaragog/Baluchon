@@ -5,16 +5,16 @@
     },
     "weather": [
         {
-            "id": 803,
-            "main": "Clouds",
-            "description": "nuageux",
-            "icon": "04d"
+            "id": 800,
+            "main": "Clear",
+            "description": "ciel dégagé",
+            "icon": "01d"
         }
     ],
     "base": "stations",
     "main": {
         "temp": 294.15,
-        "feels_like": 292.87,
+        "feels_like": 292.1,
         "temp_min": 294.15,
         "temp_max": 294.15,
         "pressure": 1026,
@@ -22,12 +22,13 @@
     },
     "visibility": 10000,
     "wind": {
-        "speed": 1.5
+        "speed": 2.6,
+        "deg": 260
     },
     "clouds": {
-        "all": 53
+        "all": 0
     },
-    "dt": 1589803811,
+    "dt": 1589805726,
     "sys": {
         "type": 1,
         "id": 6565,

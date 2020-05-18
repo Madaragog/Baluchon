@@ -19,9 +19,11 @@
 		8257EE0F2461F3AE009D2650 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257EE0B2461F3AE009D2650 /* URLSessionFake.swift */; };
 		826348EE2450B5B300FC892B /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826348ED2450B5B300FC892B /* APIKeyManager.swift */; };
 		8290A3102472B1A7005E04DB /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8290A30F2472B1A7005E04DB /* WeatherServiceTests.swift */; };
-		8290A3182472B237005E04DB /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8290A3172472B237005E04DB /* FakeResponseData.swift */; };
+		8290A3182472B237005E04DB /* FakeResponseDataNYC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8290A3172472B237005E04DB /* FakeResponseDataNYC.swift */; };
 		8290A31A2472B24F005E04DB /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8290A3192472B24F005E04DB /* URLSessionFake.swift */; };
-		8290A31C2472B2B4005E04DB /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 8290A31B2472B2B4005E04DB /* Weather.json */; };
+		8290A31C2472B2B4005E04DB /* WeatherNYC.json in Resources */ = {isa = PBXBuildFile; fileRef = 8290A31B2472B2B4005E04DB /* WeatherNYC.json */; };
+		8290A31E2472BAEA005E04DB /* WeatherRennes.json in Resources */ = {isa = PBXBuildFile; fileRef = 8290A31D2472BAEA005E04DB /* WeatherRennes.json */; };
+		8290A3202472BB02005E04DB /* FakeResponseDataRennes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8290A31F2472BB02005E04DB /* FakeResponseDataRennes.swift */; };
 		829D95DE2450C3D10061D9DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 829D95DD2450C3D10061D9DC /* Default-568h@2x.png */; };
 		82AC28332461F57E00ECA928 /* DistanceConversionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC28322461F57E00ECA928 /* DistanceConversionServiceTests.swift */; };
 		82AC283B2461FD5300ECA928 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC283A2461FD5300ECA928 /* TranslationViewController.swift */; };
@@ -87,9 +89,11 @@
 		8290A30D2472B1A7005E04DB /* WeatherServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8290A30F2472B1A7005E04DB /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
 		8290A3112472B1A7005E04DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8290A3172472B237005E04DB /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		8290A3172472B237005E04DB /* FakeResponseDataNYC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseDataNYC.swift; sourceTree = "<group>"; };
 		8290A3192472B24F005E04DB /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
-		8290A31B2472B2B4005E04DB /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		8290A31B2472B2B4005E04DB /* WeatherNYC.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherNYC.json; sourceTree = "<group>"; };
+		8290A31D2472BAEA005E04DB /* WeatherRennes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherRennes.json; sourceTree = "<group>"; };
+		8290A31F2472BB02005E04DB /* FakeResponseDataRennes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseDataRennes.swift; sourceTree = "<group>"; };
 		829D95DD2450C3D10061D9DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		82AC28302461F57E00ECA928 /* DistanceConversionServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceConversionServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AC28322461F57E00ECA928 /* DistanceConversionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConversionServiceTests.swift; sourceTree = "<group>"; };
@@ -176,9 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				8290A30F2472B1A7005E04DB /* WeatherServiceTests.swift */,
-				8290A3172472B237005E04DB /* FakeResponseData.swift */,
+				8290A3172472B237005E04DB /* FakeResponseDataNYC.swift */,
+				8290A31F2472BB02005E04DB /* FakeResponseDataRennes.swift */,
 				8290A3192472B24F005E04DB /* URLSessionFake.swift */,
-				8290A31B2472B2B4005E04DB /* Weather.json */,
+				8290A31B2472B2B4005E04DB /* WeatherNYC.json */,
+				8290A31D2472BAEA005E04DB /* WeatherRennes.json */,
 				8290A3112472B1A7005E04DB /* Info.plist */,
 			);
 			path = WeatherServiceTests;
@@ -432,7 +438,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8290A31C2472B2B4005E04DB /* Weather.json in Resources */,
+				8290A31C2472B2B4005E04DB /* WeatherNYC.json in Resources */,
+				8290A31E2472BAEA005E04DB /* WeatherRennes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +510,8 @@
 			files = (
 				8290A3102472B1A7005E04DB /* WeatherServiceTests.swift in Sources */,
 				8290A31A2472B24F005E04DB /* URLSessionFake.swift in Sources */,
-				8290A3182472B237005E04DB /* FakeResponseData.swift in Sources */,
+				8290A3202472BB02005E04DB /* FakeResponseDataRennes.swift in Sources */,
+				8290A3182472B237005E04DB /* FakeResponseDataNYC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
