@@ -17,12 +17,12 @@ class FakeResponseData {
     class ConverterError: Error {}
     static let error = ConverterError()
 
-    static var converterCorrectData: Data {
+    static var translationCorrectData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
         let url = bundle.url(forResource: "Translation", withExtension: "json")
         let data = try? Data(contentsOf: url!)
         return data!
     }
 
-    static let converterIncorrectData = "erreur".data(using: .utf8)!
+    static let translationIncorrectData = "erreur".data(using: .utf8)!
 }

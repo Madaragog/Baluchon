@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": -1.67,
+        "lat": 48.17
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "nuageux",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 294.15,
+        "feels_like": 292.87,
+        "temp_min": 294.15,
+        "temp_max": 294.15,
+        "pressure": 1026,
+        "humidity": 46
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.5
+    },
+    "clouds": {
+        "all": 53
+    },
+    "dt": 1589803811,
+    "sys": {
+        "type": 1,
+        "id": 6565,
+        "country": "FR",
+        "sunrise": 1589775803,
+        "sunset": 1589830987
+    },
+    "timezone": 7200,
+    "id": 2983989,
+    "name": "Rennes",
+    "cod": 200
+}
