@@ -17,3 +17,4 @@ Tab "Traduction" :
 
 Tab "Météo" :
 - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- Icons made by <a href="https://www.flaticon.com/free-icon/refresh_2089728" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

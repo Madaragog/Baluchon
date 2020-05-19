@@ -80,14 +80,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBb-f6-zLW">
                                         <rect key="frame" x="0.0" y="110" width="398" height="160"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-Qg-7jM">
+                                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-Qg-7jM">
                                                 <rect key="frame" x="180.5" y="61.5" width="37" height="37"/>
                                                 <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyU-w0-eyl">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" image="ConvertButtonImage">
+                                                <state key="normal" image="down arrow">
                                                     <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -350,14 +350,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wQ-f4-EsB">
                                         <rect key="frame" x="0.0" y="204" width="398" height="160"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-XX-tnh">
+                                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-XX-tnh">
                                                 <rect key="frame" x="180.5" y="61.5" width="37" height="37"/>
                                                 <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxO-sx-Bkk">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" image="TranslateButtonImage">
+                                                <state key="normal" image="down arrow">
                                                     <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
@@ -463,16 +463,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-Mo-nF6">
-                                <rect key="frame" x="8" y="100" width="398" height="560"/>
+                                <rect key="frame" x="8" y="100" width="398" height="454"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York City :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-xp-vmn">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jAW-wF-5PR">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York City :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-xp-vmn">
+                                                <rect key="frame" x="0.0" y="0.0" width="195.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udk-lc-CUv">
+                                                <rect key="frame" x="215.5" y="0.0" width="182.5" height="30"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-g6-K6p">
+                                                        <rect key="frame" x="73" y="-3.5" width="37" height="37"/>
+                                                        <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </activityIndicatorView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K6-Kb-tAC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <color key="tintColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" image="WeatherRefreshImage">
+                                                            <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80" scale="default" weight="medium"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tappedRefreshButton:" destination="Z1D-Bw-D5M" eventType="touchUpInside" id="E7D-4U-tCc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="4K6-Kb-tAC" firstAttribute="top" secondItem="Udk-lc-CUv" secondAttribute="top" id="5cp-Sl-oVX"/>
+                                                    <constraint firstItem="4K6-Kb-tAC" firstAttribute="leading" secondItem="Udk-lc-CUv" secondAttribute="leading" id="6rq-vY-G71"/>
+                                                    <constraint firstItem="YD8-g6-K6p" firstAttribute="centerX" secondItem="Udk-lc-CUv" secondAttribute="centerX" id="9P3-g7-X8N"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4K6-Kb-tAC" secondAttribute="bottom" id="Ilg-E9-SLd"/>
+                                                    <constraint firstItem="YD8-g6-K6p" firstAttribute="centerY" secondItem="Udk-lc-CUv" secondAttribute="centerY" id="Jge-r4-gtf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4K6-Kb-tAC" secondAttribute="trailing" id="io2-7B-FcW"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="mF0-3g-mdE"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oX6-DZ-DOn">
-                                        <rect key="frame" x="0.0" y="56" width="398" height="164"/>
+                                        <rect key="frame" x="0.0" y="50" width="398" height="164"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRQ-yq-u9t">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="24"/>
@@ -508,44 +546,14 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udk-lc-CUv">
-                                        <rect key="frame" x="0.0" y="240" width="398" height="80"/>
-                                        <subviews>
-                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-g6-K6p">
-                                                <rect key="frame" x="180.5" y="21.5" width="37" height="37"/>
-                                                <color key="color" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </activityIndicatorView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K6-Kb-tAC">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="80"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <state key="normal" image="WeatherRefreshImage">
-                                                    <color key="titleColor" red="0.67787843940000003" green="0.42354157570000001" blue="0.59609395269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80" scale="default" weight="medium"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="tappedRefreshButton:" destination="Z1D-Bw-D5M" eventType="touchUpInside" id="E7D-4U-tCc"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.82880926129999999" green="0.93609470130000005" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="7QR-o2-jJf"/>
-                                            <constraint firstItem="4K6-Kb-tAC" firstAttribute="leading" secondItem="Udk-lc-CUv" secondAttribute="leading" id="9ex-Th-mIx"/>
-                                            <constraint firstAttribute="bottom" secondItem="4K6-Kb-tAC" secondAttribute="bottom" id="N9m-om-FZI"/>
-                                            <constraint firstItem="4K6-Kb-tAC" firstAttribute="top" secondItem="Udk-lc-CUv" secondAttribute="top" id="Ng4-5h-1oT"/>
-                                            <constraint firstItem="YD8-g6-K6p" firstAttribute="centerY" secondItem="Udk-lc-CUv" secondAttribute="centerY" id="Qm8-hR-oEV"/>
-                                            <constraint firstItem="YD8-g6-K6p" firstAttribute="centerX" secondItem="Udk-lc-CUv" secondAttribute="centerX" id="Uga-YZ-vVX"/>
-                                            <constraint firstAttribute="trailing" secondItem="4K6-Kb-tAC" secondAttribute="trailing" id="tk3-b0-BHi"/>
-                                        </constraints>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rennes :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-04-wXQ">
-                                        <rect key="frame" x="0.0" y="340" width="398" height="36"/>
+                                        <rect key="frame" x="0.0" y="234" width="398" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.17668068410000001" green="0.69189250469999997" blue="0.79217445850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-Jq-ANn">
-                                        <rect key="frame" x="0.0" y="396" width="398" height="164"/>
+                                        <rect key="frame" x="0.0" y="290" width="398" height="164"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsN-V2-QMC">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="24"/>
@@ -612,18 +620,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4W-Kz-T4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cQ8-eZ-qHo"/>
             </objects>
-            <point key="canvasLocation" x="-439" y="1166"/>
+            <point key="canvasLocation" x="-439.13043478260875" y="1165.8482142857142"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ConvertButtonImage" width="617" height="262"/>
         <image name="DistanceConversionTabBarIcon" width="30" height="30"/>
         <image name="MoneyConvertorTabBarIcon" width="30" height="30"/>
-        <image name="TranslateButtonImage" width="566" height="222"/>
         <image name="TranslationTabBarIcon" width="30" height="30"/>
-        <image name="WeatherRefreshImage" width="529" height="113"/>
+        <image name="WeatherRefreshImage" width="30" height="30"/>
         <image name="WeatherTabBarIcon" width="30" height="30"/>
-        <image name="down arrow" width="360" height="360"/>
-        <image name="up arrow" width="360" height="360"/>
+        <image name="down arrow" width="140" height="180"/>
+        <image name="up arrow" width="140" height="180"/>
     </resources>
 </document>

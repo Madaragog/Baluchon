@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "down arrow.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "down arrow.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
