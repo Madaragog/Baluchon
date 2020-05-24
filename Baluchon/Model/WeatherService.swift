@@ -13,7 +13,7 @@ class WeatherService {
     private static let weatherNYCUrl = URL(
         string: "https://api.openweathermap.org/data/2.5/weather?lat=40.71&lon=-74.01&appid=\(key)&lang=fr")!
     private static let weatherRennesUrl = URL(
-        string: "https://api.openweathermap.org/data/2.5/weather?lat=48.17&lon=-1.67&appid=\(key)&lang=fr")!
+        string: "https://api.openweathermap.org/data/2.5/weather?q=Rennes&appid=\(key)&lang=fr")!
 
     private var task: URLSessionDataTask?
     private var session = URLSession(configuration: .default)
